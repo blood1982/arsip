@@ -1,0 +1,39 @@
+
+uninstall source
+-------------------------
+make uninstall
+make -n install
+
+update-alternatives
+-----------------------------
+update-alternatives --config nama_alternative
+mengatur alternative tertentu
+update-alternatives --get-selections
+melihat list alternative
+update-alternatives --list nama_alternative
+melihat list program yang bsa di set ke nama_alternative
+
+install font di linux
+-----------------------------
+copy file ke /usr/local/share/font
+jalankan perintah fc-cache -fv (jika perlu di ukuti dengan dir menuju font nya) 
+
+redirect 
+-------------
+command > out.txt 2>&1 : semua stderr dan stdout akan di simpan ke dalam file out.txt
+command > out.txt 2> error.txt : stdout ke outfile dan stderr ke error.txt
+
+file descriptor
+---------------------
+Deskriptor file 1 adalah output standar (stdout).
+Deskriptor 2 file adalah kesalahan standar (stderr).
+
+Berikut adalah salah satu cara untuk mengingat konstruk ini (meskipun tidak sepenuhnya akurat): pada awalnya, 2> 1 mungkin terlihat seperti cara yang baik untuk mengarahkan stderr ke stdout. Namun, itu sebenarnya akan ditafsirkan sebagai "redirect stderr ke file bernama 1". & menunjukkan bahwa yang berikut adalah deskriptor file dan bukan nama file. Jadi konstruknya menjadi: 2> & 
+
+search pake diluar debian
+---------------------------------------
+aptitude search ~i'(!~ODebian)'
+~i : mencari yng status nya installed
+! : negasi / kebalikan
+~O : origin, paket yng origin debian
+

@@ -1,0 +1,74 @@
+hardware
+--------------
+lscpu : menampilkan detail cpu
+cat /proc/cpuinfo : menampilkan detail cpu
+lsmem : menampilkan detail memmory
+cat /proc/meminfo : menampilkan detail memmory
+free -h  :menampilkan jumlah memori dan swap
+lspci : menampilkan device pci
+lsusb : menampilkan device usb
+& : akan membuat program berjalan background
+lshw -C video : detail vga (untuk melihat class gunakan lshw -)
+lshw lebih mudah menampilkan detail hw dengan catatan harus di sudo
+xrandr | head 1 : menampilkan resolusi 
+
+network
+------------
+netstat -tl : menampilkan nama service (tanbahkan -n jika ingin menampilkan format number, jika ingnin menampilkan nama service tambahkan option -p,dengan catatan harus di sudo)
+ss -tl : sama seperti nstat, ss merupakan utility socket
+jika ingin 
+arp -a : menampilkan list arp
+ip -4 addr : menampilkan ip
+ip route : menampilkan route
+
+log 
+-----
+/var/log/messages : system message
+/var/log/auth.log : even authentication
+/var/log/boot.log : catatan ketika boot
+/var/log/kern.log : kernel troubleshooting
+/var/log/apt/term.log : terminal apt log
+/var/log/apt/history.log : history apt 
+last : menampilkan kapan terakhir login dan reboot
+uptime : menamlpilkan durasi nyala pc (tambahkann option -p agar lebih mudah di baca, dan -s untuk menampilkan kapan pc di nyalakan)
+last nama_user : cek terakhir login
+
+service 
+-----------
+systemctl --all --full :semua service
+systemctl --failed : menampilkan semua service yg gagal
+systemctl status nama_service : status service
+
+driver
+---------
+lsmod : menampilkand daftar driver
+
+systeminformation
+----------------------------
+ps a : menampilkan detail yng berhubungan dengan terminal (menampilkan command terminal)
+ps -e : menampilkan semua (termasuk user root)
+ps -x : menampilkan process yng sedang berjalan di 
+ps u : menampilkan nama semua user (akan menampilkan cpu,mem,rss)
+ps -u nama_user : 
+pa --sort judul : mengurutkan dari kecil ke besar ( jika di tambah "-" contoh -%MEM , akan mengurutkan dari besar ke kecil)
+ps --forest :
+ps -p pid : nama process mencari berdasarkan pid
+pgrep : mencari pid berdasarkan nama process
+uname -a : system information
+uname -r : menampilkan kernel
+lsb_release -a : menampilkan detail os , release , dan codename
+hostname : menampilkan hostname (-I menampilkan ip yang di miliki hostname)
+date : menampilkan tanggal
+cal : menampilkan calender
+w : menampilkan siapa yng online
+
+General
+-------
+tee : membaca dari stdin dan kemudian menampilkan nya ke stdout dan secara bersaman menuliskan nya dalam file
+ls | tee daftar.txt
+pgrep : process grep,mengambil pid dari yg di cari
+printf: berbeda dengan echo printf tidak 
+diff -q : membanndingkan beberapa file (baris per baris)
+du -s -h : menampilkan size satu folder
+du -d level -h : -d menentukan level,-d 0 sama dengan -s
+hostnamectl : menampilkan versi os dan kernel

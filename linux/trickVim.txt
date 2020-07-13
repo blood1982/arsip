@@ -1,0 +1,44 @@
+vim
+-------
+
+Ctrl-D  move half-page down
+Ctrl-U  move half-page up
+Ctrl-B  page up
+Ctrl-F  page down
+
+J ( j besar ) : untuk menggabungkan baris
+:vsplit : split secara vertikal (kanan kiri)
+:split : split secara horizontal ()
+:help nama_printah : untuk melihat cara penggunaan
+
+:tabonly : menutup semua tab, kecuali yg sedang aktif
+:tabedit path/to/fille.txt : edit file di new tab
+:tabs : melihat semua tab
+:tabclose : menutup tab
+move
+:tabnext ( posisi normal = gt ) : tab berikutnya
+:tabprevious ( posisi normal = gT ) :tab sebelumnya
+:tablast : tab akhir
+:tabfirst : tab awal
+
+shift + v : visual line
+ctrl + v : visual block
+:recover : recover ke backup data
+:put =range(1,5)  : print angka dari satu sampe 5
+:for i in range(1,5) | put ='contoh'.1 | enfor : mencetak contoh1,contoh2,contohn . string harus di apit dengan kutip satu. dan ketika di satukan dengan variable i harus di sambungkan denga tanda titik , seperti di php
+
+comment vim
+---------------------
+shift + v : visual line
+pilih baris yg akan di uncomment
+:s/^/#/
+
+:66,70s/^/# : range baris dan subtitusi
+
+uncomment vim
+-------------------------
+ctrl + v : visual block
+pilih comment kemudai "x" untuk hapus
+:66,70s/^#/ /
+
+

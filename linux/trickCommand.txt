@@ -1,0 +1,14 @@
+ls
+------
+* : brapapun ,char apa saja 
+? :satu char apa saja
+[] : satu char ,yang ada di dalam kurung bsa [124] atau [1-9] (sama seperti di regex)
+--ignore=*.txt : menampilkan apa saja yang selain .txt
+
+git
+-----
+git commit --amend : merubah commit dengan catatan perhatikan di mana anda checkout
+
+nmap script
+------------------
+nmap --script-help "*namascript*"
